@@ -1,4 +1,6 @@
-require "ups/tracking/version"
+# frozen_string_literal: true
+
+require 'ups/tracking/version'
 
 module UPS
   module Tracking
