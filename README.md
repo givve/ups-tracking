@@ -1,6 +1,7 @@
 # UPS::Tracking
 
 [![Build Status](https://travis-ci.com/givve/ups-tracking.svg?branch=master)](https://travis-ci.com/givve/ups-tracking)
+[![Depfu](https://badges.depfu.com/badges/ae3a3de3b900b7a66dff01c2ba4421bc/count.svg)](https://depfu.com/repos/givve/ups-tracking?project_id=6484)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ups/tracking`. To experiment with that code, run `bin/console` for an interactive prompt.
 
