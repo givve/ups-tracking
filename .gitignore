@@ -9,3 +9,5 @@
 /.ruby-gemset
 /.ruby-version
 /.yardoc
+/gems.locked
+/Gemfile.lock
