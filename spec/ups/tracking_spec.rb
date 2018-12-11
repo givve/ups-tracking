@@ -1,6 +1,6 @@
-RSpec.describe Ups::Tracking do
+RSpec.describe UPS::Tracking do
   it "has a version number" do
-    expect(Ups::Tracking::VERSION).not_to be nil
+    expect(UPS::Tracking::VERSION).not_to be nil
   end
 
   it "does something useful" do

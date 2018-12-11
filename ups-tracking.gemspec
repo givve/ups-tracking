@@ -5,7 +5,7 @@ require "ups/tracking/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "ups-tracking"
-  spec.version       = Ups::Tracking::VERSION
+  spec.version       = UPS::Tracking::VERSION
   spec.authors       = ["Leo Arnold"]
 
   spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
