@@ -1,9 +1,7 @@
-RSpec.describe UPS::Tracking do
-  it "has a version number" do
-    expect(UPS::Tracking::VERSION).not_to be nil
-  end
+require 'spec_helper'
 
-  it "does something useful" do
-    expect(false).to eq(true)
+describe UPS::Tracking do
+  it "has a semantic version number" do
+    expect(UPS::Tracking::VERSION).to match(/\A\d+\.\d+\.\d+/)
   end
 end
