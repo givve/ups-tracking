@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'ups/tracking/version'
 
-Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
+Gem::Specification.new do |spec|
   spec.name          = 'ups-tracking'
   spec.version       = UPS::Tracking::VERSION
   spec.authors       = ['Leo Arnold']
@@ -38,6 +38,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.add_development_dependency 'rake', '~> 12.3'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.61'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.30'
   spec.add_development_dependency 'simplecov', '~> 0.10'
   spec.add_development_dependency 'yard', '~> 0.9'
 end

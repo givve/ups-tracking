@@ -1,9 +1,19 @@
 ---
+require: 'rubocop-rspec'
+
 AllCops:
   TargetRubyVersion: 2.4
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - '*.gemspec'
+
 Metrics/LineLength:
   Max: 144
+
+RSpec/NestedGroups:
+  Enabled: false
 
 Style/SymbolArray:
   Enabled: false
