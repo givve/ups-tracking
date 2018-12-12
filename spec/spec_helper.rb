@@ -1,7 +1,18 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'ups/tracking'
+Bundler.require(:development)
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter
+]
+
+SimpleCov.start do
+  add_filter '/rakelib/'
+  add_filter '/spec/'
+  add_filter '/vendor/'
+  minimum_coverage_by_file 95
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -14,3 +25,5 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+require 'ups/tracking'
