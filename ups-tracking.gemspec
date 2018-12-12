@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'ups/tracking/version'
 
-Gem::Specification.new do |spec|
+Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.name          = 'ups-tracking'
   spec.version       = UPS::Tracking::VERSION
   spec.authors       = ['Leo Arnold']
@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
     spec.metadata['source_code_uri'] = 'https://github.com/givve/ups-tracking'
     spec.metadata['changelog_uri'] = 'https://github.com/givve/ups-tracking/blob/master/CHANGELOG.md'
+    spec.metadata['yard.run'] = 'yri'
   end
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
@@ -35,4 +36,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.61'
   spec.add_development_dependency 'simplecov', '~> 0.10'
+  spec.add_development_dependency 'yard', '~> 0.9'
 end
