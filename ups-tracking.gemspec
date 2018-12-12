@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
       '*.gemspec',
       '*.md',
       '*.txt'
-    ]
+    ] & `git ls-files -z`.split("\0")
   end
   spec.require_paths = ['lib']
 
