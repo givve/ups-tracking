@@ -1,0 +1,6 @@
+/bin/* linguist-vendored
+/spec/* linguist-vendored
+/gems.* linguist-vendored
+/Gemfile* linguist-vendored
+/Rakefile linguist-vendored
+/*.gemspec linguist-vendored
