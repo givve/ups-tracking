@@ -3,6 +3,13 @@
 require 'bundler/setup'
 Bundler.require(:development)
 
+FIXTURE_ROOT = Pathname.new(File.expand_path('fixtures', __dir__)).freeze
+TRACKING_URI = 'https://tracking.example.ups/rest/Track'
+
+Dir["#{__dir__}/helpers/*.rb"].each do |file|
+  require file
+end
+
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter
 ]

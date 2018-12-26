@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'ups/tracking/package'
 require 'ups/tracking/version'
 
 module UPS

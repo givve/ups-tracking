@@ -1,0 +1,38 @@
+{
+  "TrackingNumber": "1Z12345E6692804405",
+  "Activity": {
+    "ActivityLocation": {
+      "Address": {
+        "City": "BERLIN",
+        "PostalCode": "11011",
+        "CountryCode": "DE"
+      },
+      "Code": "M1",
+      "Description": "Residential",
+      "SignedForByName": "MERKEL"
+    },
+    "Status": {
+      "Type": "D",
+      "Description": "Delivered",
+      "Code": "KB"
+    },
+    "Date": "20181212",
+    "Time": "150218"
+  },
+  "PackageWeight": {
+    "UnitOfMeasurement": {
+      "Code": "KGS"
+    },
+    "Weight": "1.00"
+  },
+  "ReferenceNumber": [
+    {
+      "Code": "19",
+      "Value": "cgish000116630"
+    },
+    {
+      "Code": "19",
+      "Value": "MySecondReference"
+    }
+  ]
+}
