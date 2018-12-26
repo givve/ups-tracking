@@ -2,6 +2,10 @@
 
 module UPS
   module Tracking
+    # Data object encapsulating any element of +TrackResponse.Shipment[].Package+
+    #
+    # @author Leo Arnold
+    # @since 0.1.0
     class Package
       def initialize(data)
         @data = data
