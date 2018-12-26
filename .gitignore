@@ -5,6 +5,7 @@
 /pkg/
 /spec/reports/
 /tmp/
+/vendor/
 /.rspec_status
 /.ruby-gemset
 /.ruby-version
