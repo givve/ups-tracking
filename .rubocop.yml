@@ -16,4 +16,4 @@ RSpec/NestedGroups:
   Enabled: false
 
 Style/SymbolArray:
-  Enabled: false
+  EnforcedStyle: brackets
