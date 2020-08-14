@@ -1,6 +1,19 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
+Bundler.require(:test)
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter
+]
+
+SimpleCov.start do
+  add_filter '/rakelib/'
+  add_filter '/spec/'
+  add_filter '/vendor/'
+  minimum_coverage_by_file 95
+end
+
 require 'ups/tracking'
 
 RSpec.configure do |config|
