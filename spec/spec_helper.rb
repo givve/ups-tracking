@@ -3,6 +3,8 @@
 require 'bundler/setup'
 Bundler.require(:test)
 
+FIXTURES_ROOT = Pathname.new(File.expand_path('fixtures', __dir__)).freeze
+
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter
 ]
@@ -15,6 +17,8 @@ SimpleCov.start do
 end
 
 require 'ups/tracking'
+
+Dir["#{__dir__}/helpers/*.rb"].sort.each { |file| require file }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

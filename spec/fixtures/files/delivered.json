@@ -1,0 +1,220 @@
+{
+  "TrackResponse": {
+    "Response": {
+      "ResponseStatus": {
+        "Code": "1",
+        "Description": "Success"
+      },
+      "TransactionReference": ""
+    },
+    "Shipment": {
+      "InquiryNumber": {
+        "Code": "01",
+        "Description": "ShipmentIdentificationNumber",
+        "Value": "1Z44901G2210228734"
+      },
+      "ShipperNumber": "44901G",
+      "ShipmentAddress": [
+        {
+          "Type": {
+            "Code": "01",
+            "Description": "Shipper Address"
+          },
+          "Address": {
+            "AddressLine": "488 COOLIDGE PARK",
+            "City": "SUNNYVALE",
+            "PostalCode": "47029",
+            "CountryCode": "DE"
+          }
+        },
+        {
+          "Type": {
+            "Code": "02",
+            "Description": "ShipTo Address"
+          },
+          "Address": {
+            "City": "BERKELEY",
+            "PostalCode": "69790",
+            "CountryCode": "DE"
+          }
+        }
+      ],
+      "ShipmentWeight": {
+        "UnitOfMeasurement": {
+          "Code": "KGS"
+        },
+        "Weight": "1.00"
+      },
+      "Service": {
+        "Code": "011",
+        "Description": "UPS Standard"
+      },
+      "ReferenceNumber": [
+        {
+          "Code": "16",
+          "Value": "5F35F7C7A8F8430CCAA732F2"
+        },
+        {
+          "Code": "13",
+          "Value": "44901G4HJHK"
+        },
+        {
+          "Code": "17",
+          "Value": "GIVVE - C_GPS008580_324757"
+        }
+      ],
+      "PickupDate": "20200812",
+      "Package": {
+        "TrackingNumber": "1Z44901G2210228734",
+        "Activity": [
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "BERKELEY",
+                "PostalCode": "69790",
+                "CountryCode": "DE"
+              },
+              "Code": "M6",
+              "Description": "Office",
+              "SignedForByName": "PERKINS"
+            },
+            "Status": {
+              "Type": "D",
+              "Description": "Delivered",
+              "Code": "9E"
+            },
+            "Date": "20200813",
+            "Time": "092026"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Irwindale",
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Out For Delivery",
+              "Code": "OF"
+            },
+            "Date": "20200813",
+            "Time": "063000"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Irwindale",
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Arrived at Facility",
+              "Code": "AR"
+            },
+            "Date": "20200813",
+            "Time": "023000"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Porterville",
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Departed from Facility",
+              "Code": "DP"
+            },
+            "Date": "20200813",
+            "Time": "013000"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Porterville",
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Arrived at Facility",
+              "Code": "AR"
+            },
+            "Date": "20200812",
+            "Time": "203000"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Brentwood",
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Departed from Facility",
+              "Code": "DP"
+            },
+            "Date": "20200812",
+            "Time": "185300"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Brentwood",
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Origin Scan",
+              "Code": "OR"
+            },
+            "Date": "20200812",
+            "Time": "172850"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "CountryCode": "DE"
+              },
+              "Description": "Office"
+            },
+            "Status": {
+              "Type": "M",
+              "Description": "Order Processed: Ready for UPS",
+              "Code": "MP"
+            },
+            "Date": "20200812",
+            "Time": "091707"
+          }
+        ],
+        "PackageWeight": {
+          "UnitOfMeasurement": {
+            "Code": "KGS"
+          },
+          "Weight": "1.00"
+        },
+        "ReferenceNumber": [
+          {
+            "Code": "19",
+            "Value": "5F35F7C7A8F8430CCAA732F2"
+          },
+          {
+            "Code": "19",
+            "Value": "GIVVE - C_GPS008580_324757"
+          }
+        ]
+      }
+    }
+  }
+}

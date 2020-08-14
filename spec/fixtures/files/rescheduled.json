@@ -1,0 +1,216 @@
+{
+  "TrackResponse": {
+    "Response": {
+      "ResponseStatus": {
+        "Code": "1",
+        "Description": "Success"
+      },
+      "TransactionReference": ""
+    },
+    "Shipment": {
+      "InquiryNumber": {
+        "Code": "01",
+        "Description": "ShipmentIdentificationNumber",
+        "Value": "1Z44901G1728138183"
+      },
+      "ShipperNumber": "44901G",
+      "ShipmentAddress": [
+        {
+          "Type": {
+            "Code": "01",
+            "Description": "Shipper Address"
+          },
+          "Address": {
+            "AddressLine": "488 COOLIDGE PARK",
+            "City": "SUNNYVALE",
+            "PostalCode": "47029",
+            "CountryCode": "DE"
+          }
+        },
+        {
+          "Type": {
+            "Code": "02",
+            "Description": "ShipTo Address"
+          },
+          "Address": {
+            "City": "ROSEMEAD",
+            "PostalCode": "23489",
+            "CountryCode": "DE"
+          }
+        }
+      ],
+      "ShipmentWeight": {
+        "UnitOfMeasurement": {
+          "Code": "KGS"
+        },
+        "Weight": "1.00"
+      },
+      "Service": {
+        "Code": "011",
+        "Description": "UPS Standard"
+      },
+      "ReferenceNumber": [
+        {
+          "Code": "16",
+          "Value": "5F35F60AA8F8430CCAA732F1"
+        },
+        {
+          "Code": "13",
+          "Value": "44901G8FNHH"
+        },
+        {
+          "Code": "17",
+          "Value": "GIVVE - 00f00d80-a7db-47e7-a2ea-c8b7986908b9"
+        }
+      ],
+      "PickupDate": "20200812",
+      "Package": {
+        "TrackingNumber": "1Z44901G1728138183",
+        "DeliveryDetail": {
+          "Type": {
+            "Code": "04",
+            "Description": "Rescheduled Delivery"
+          },
+          "Date": "20200814"
+        },
+        "Activity": [
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Atwater",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "X",
+              "Description": "Delivery will be delayed by one business day.",
+              "Code": "C6"
+            },
+            "Date": "20200813",
+            "Time": "175504"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Atwater",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Out For Delivery",
+              "Code": "OF"
+            },
+            "Date": "20200813",
+            "Time": "080700"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Atwater",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Arrived at Facility",
+              "Code": "AR"
+            },
+            "Date": "20200813",
+            "Time": "071300"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Pismo Beach",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Departed from Facility",
+              "Code": "DP"
+            },
+            "Date": "20200813",
+            "Time": "023500"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Pismo Beach",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Arrived at Facility",
+              "Code": "AR"
+            },
+            "Date": "20200813",
+            "Time": "000800"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Brentwood",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Departed from Facility",
+              "Code": "DP"
+            },
+            "Date": "20200812",
+            "Time": "185300"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "City": "Brentwood",
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "I",
+              "Description": "Origin Scan",
+              "Code": "OR"
+            },
+            "Date": "20200812",
+            "Time": "173515"
+          },
+          {
+            "ActivityLocation": {
+              "Address": {
+                "CountryCode": "DE"
+              }
+            },
+            "Status": {
+              "Type": "M",
+              "Description": "Order Processed: Ready for UPS",
+              "Code": "MP"
+            },
+            "Date": "20200812",
+            "Time": "090900"
+          }
+        ],
+        "PackageWeight": {
+          "UnitOfMeasurement": {
+            "Code": "KGS"
+          },
+          "Weight": "1.00"
+        },
+        "ReferenceNumber": [
+          {
+            "Code": "19",
+            "Value": "5F35F60AA8F8430CCAA732F1"
+          },
+          {
+            "Code": "19",
+            "Value": "GIVVE - 00f00d80-a7db-47e7-a2ea-c8b7986908b9"
+          }
+        ]
+      }
+    }
+  }
+}
