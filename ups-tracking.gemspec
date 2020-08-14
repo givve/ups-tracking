@@ -4,7 +4,7 @@ require_relative 'lib/ups/tracking/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'ups-tracking'
-  spec.version       = Ups::Tracking::VERSION
+  spec.version       = UPS::Tracking::VERSION
   spec.authors       = ['Leo Arnold']
 
   spec.summary       = 'A Ruby client for the UPS shipment tracking JSON API'
