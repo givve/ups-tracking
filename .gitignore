@@ -6,6 +6,8 @@
 /spec/reports/
 /tmp/
 
+/.rspec_status
 /.ruby-gemset
 /.ruby-version
 /.yardoc
+/Gemfile.lock
