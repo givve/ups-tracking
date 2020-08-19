@@ -5,13 +5,7 @@ module UPS
     class Shipment
       class Package
         class Activity
-          attr_reader :attributes
-
-          def initialize(attributes)
-            raise ArgumentError, 'Attributes must be a Hash' unless attributes.is_a?(Hash)
-
-            @attributes = attributes
-          end
+          include UPS::JsonApi::Entity
         end
       end
     end

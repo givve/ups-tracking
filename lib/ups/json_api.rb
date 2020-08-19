@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'ups/json_api/entity'
 require 'ups/json_api/response/header'
 require 'ups/json_api/response'
 
