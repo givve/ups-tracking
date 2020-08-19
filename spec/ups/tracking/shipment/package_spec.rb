@@ -8,16 +8,12 @@ RSpec.describe UPS::Tracking::Shipment::Package do
   context 'when all packages of the shipment were delivered already' do
     let(:attributes) { json_fixture('delivered.json').dig('TrackResponse', 'Shipment', 'Package') }
 
-    describe '#activities' do
-      subject(:activities) { package.activities }
+    its(:activities) { is_expected.to all(be_a(described_class::Activity)) }
 
-      it { is_expected.to all(be_a(described_class::Activity)) }
-    end
+    its(:delivery) { is_expected.to be_a(described_class::Activity) }
 
-    describe '#tracking_number' do
-      subject(:tracking_number) { package.tracking_number }
+    it { is_expected.to be_delivered }
 
-      it { is_expected.to eq('1Z44901G2210228734') }
-    end
+    its(:tracking_number) { is_expected.to eq('1Z44901G2210228734') }
   end
 end

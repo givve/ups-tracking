@@ -3,6 +3,9 @@
 require 'ups/json_api'
 
 require 'ups/tracking/fault'
+require 'ups/tracking/shipment/package/activity/location/address'
+require 'ups/tracking/shipment/package/activity/location'
+require 'ups/tracking/shipment/package/activity/status'
 require 'ups/tracking/shipment/package/activity'
 require 'ups/tracking/shipment/package'
 require 'ups/tracking/shipment'

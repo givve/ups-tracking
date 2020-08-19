@@ -9,6 +9,14 @@ module UPS
         attribute :tracking_number, 'TrackingNumber'
 
         has_many :activities, 'Activity', Activity
+
+        def delivery
+          @delivery ||= activities.detect { |activity| activity.status&.delivered? }
+        end
+
+        def delivered?
+          !delivery.nil?
+        end
       end
     end
   end

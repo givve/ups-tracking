@@ -28,17 +28,9 @@ RSpec.describe UPS::Tracking::Response do
 
     it { is_expected.to be_success }
 
-    describe '#fault' do
-      subject(:fault) { response.fault }
+    its(:fault) { is_expected.to be nil }
 
-      it { is_expected.to be nil }
-    end
-
-    describe '#shipment' do
-      subject(:shipment) { response.shipment }
-
-      it { is_expected.to be_a UPS::Tracking::Shipment }
-    end
+    its(:shipment) { is_expected.to be_a UPS::Tracking::Shipment }
   end
 
   context 'when no tracking information is available' do
@@ -68,16 +60,8 @@ RSpec.describe UPS::Tracking::Response do
 
     it { is_expected.to_not be_success }
 
-    describe '#fault' do
-      subject(:fault) { response.fault }
+    its(:fault) { is_expected.to be_a(UPS::Tracking::Fault) }
 
-      it { is_expected.to be_a(UPS::Tracking::Fault) }
-    end
-
-    describe '#shipment' do
-      subject(:shipment) { response.shipment }
-
-      it { is_expected.to be nil }
-    end
+    its(:shipment) { is_expected.to be nil }
   end
 end

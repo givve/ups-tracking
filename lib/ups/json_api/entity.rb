@@ -13,6 +13,19 @@ module UPS
           end
         end
 
+        def has_one(name, key, klass) # rubocop:disable Naming/PredicateName
+          define_method(name) do
+            return unless attributes.key?(key)
+
+            instance_variable = "@#{name}".to_sym
+            cached_value = instance_variable_get(instance_variable)
+            return cached_value unless cached_value.nil?
+
+            value = attributes[key]
+            instance_variable_set(instance_variable, value.is_a?(Hash) ? klass.new(value) : nil)
+          end
+        end
+
         def has_many(name, key, klass) # rubocop:disable Naming/PredicateName
           define_method(name) do
             return unless attributes.key?(key)
