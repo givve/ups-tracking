@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require 'ups/json_api'
+
+require 'ups/tracking/shipment'
+require 'ups/tracking/response'
 require 'ups/tracking/version'
 
 module UPS

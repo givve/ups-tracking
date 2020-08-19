@@ -8,3 +8,10 @@ AllCops:
 
 Layout/LineLength:
   Max: 144
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
+Style/Documentation:
+  Enabled: false
