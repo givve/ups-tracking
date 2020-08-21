@@ -16,6 +16,8 @@ SimpleCov.start do
   minimum_coverage_by_file 95
 end
 
+require 'securerandom'
+
 require 'ups/tracking'
 
 Dir["#{__dir__}/helpers/*.rb"].sort.each { |file| require file }

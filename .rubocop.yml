@@ -13,6 +13,9 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*_spec.rb'
 
+RSpec/ExpectChange:
+  EnforcedStyle: block
+
 RSpec/NotToNot:
   EnforcedStyle: to_not
 

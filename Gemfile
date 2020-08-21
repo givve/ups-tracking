@@ -13,6 +13,7 @@ group :development do
 end
 
 group :test do
+  gem 'rails', '~> 6'
   gem 'rspec', '~> 3.0'
   gem 'rspec-its', '~> 1.3'
   gem 'simplecov', '~> 0.18'
