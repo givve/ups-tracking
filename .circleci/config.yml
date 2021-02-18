@@ -1,0 +1,46 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1
+
+jobs:
+  checks:
+    docker:
+      - image: circleci/ruby:2.5.8-stretch-browsers
+    steps:
+      - checkout
+      - ruby/install-deps:
+          with-cache: false
+          bundler-version: 2.2.11
+          path: .bundle
+      - ruby/rubocop-check
+    
+  run_specs:
+    parameters:
+      docker_image:
+        type: string
+    docker:
+      - image: circleci/<< parameters.docker_image >>
+    steps:
+      - checkout
+      - ruby/install-deps:
+          with-cache: false
+          bundler-version: 2.2.11
+          path: .bundle
+      - ruby/rspec-test
+
+workflows:
+  all_jobs:
+    jobs:
+      - checks:
+          context: 
+          - givve_gem_server
+      - run_specs:
+          context:
+            - givve_gem_server
+          matrix:
+            parameters:
+              docker_image: 
+                - ruby:2.5.8-stretch-browsers
+                - ruby:2.7.2
+                - ruby:3.0
