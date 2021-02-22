@@ -5,6 +5,7 @@ require:
 AllCops:
   NewCops: enable
   TargetRubyVersion: 2.5
+  SuggestExtensions: false
 
 Layout/LineLength:
   Max: 144
@@ -12,6 +13,7 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*_spec.rb'
+    - '*.gemspec'
 
 RSpec/ExpectChange:
   EnforcedStyle: block
