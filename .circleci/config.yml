@@ -6,7 +6,7 @@ orbs:
 jobs:
   checks:
     docker:
-      - image: circleci/ruby:2.5.8-stretch-browsers
+      - image: circleci/ruby:2.7.4
     steps:
       - checkout
       - ruby/install-deps:
@@ -41,6 +41,6 @@ workflows:
           matrix:
             parameters:
               docker_image: 
-                - ruby:2.5.8-stretch-browsers
-                - ruby:2.7.2
-                - ruby:3.0
+                - ruby:2.7.3
+                - ruby:2.7.4
+                - ruby:3.0.2
