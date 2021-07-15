@@ -1,25 +1,173 @@
 require:
   - rubocop-performance
-  - rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Include
 
 AllCops:
+  TargetRubyVersion: 2.7
   NewCops: enable
-  TargetRubyVersion: 2.5
   SuggestExtensions: false
+  Include:
+    - '**/*.jfactory'
+  Exclude:
+    - vendor/**/*
+    - bin/**/*
+    - gemfiles/**/*
+    - tmp/**/*
+    - config/initializers/mongoid_state_machine_fix.rb
+    - db/seeds.rb
+
+### Layout ###
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
 
 Layout/LineLength:
-  Max: 144
+  Max: 378
+
+### Lint ###
+
+# see: https://github.com/rubocop-hq/rubocop/issues/4222
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+    - app/**/*.jbuilder
+
+Lint/DuplicateBranch:
+  Enabled: false
+
+Lint/EmptyBlock:
+  Exclude:
+    - spec/page_objects/**/*.rb
+
+Lint/MissingSuper:
+  Enabled: false
+
+Lint/OrAssignmentToConstant:
+  Enabled: false
+
+# Good intention, but we do not override #to_json
+# for the purpose of serialization.
+Lint/ToJSON:
+  Enabled: false
+
+### Metrics ###
+
+Metrics/AbcSize:
+  Max: 40
+  Exclude:
+    - app/exporters/**/*.rb
+    - app/models/ability.rb
+    - app/services/bi/**/*.rb
+    - lib/excel_exporter.rb
 
 Metrics/BlockLength:
+  Max: 150
   Exclude:
-    - 'spec/**/*_spec.rb'
-    - '*.gemspec'
+    - app/api/v2/**/*
+    - config/routes.rb
+    - lib/tasks/*.rake
+    - spec/**/*
+  IgnoredMethods:
+    # grape
+    - resource
 
-RSpec/ExpectChange:
-  EnforcedStyle: block
+Metrics/ClassLength:
+  Enabled: false
 
-RSpec/NotToNot:
-  EnforcedStyle: to_not
+Metrics/CyclomaticComplexity:
+  Max: 19
+  Exclude:
+    - app/services/card_order_entry_builder.rb
+
+Metrics/MethodLength:
+  Max: 59
+  Exclude:
+    - app/services/card_order_entry_builder.rb
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Max: 41
+
+### Naming ###
+
+Naming/AccessorMethodName:
+  Exclude:
+    - app/models/accounting/invoice.rb
+
+Naming/InclusiveLanguage:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+### Performance ###
+# if the format of the source in the following is unknown, it is not 
+# recognisable as an equality comparison and can be thought of as a typo -
+# and makes typos a lot more easy to slip past code reviews.
+Performance/RedundantEqualityComparisonBlock:
+  Enabled: false
+
+### Style ###
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/CaseEquality:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
 
 Style/Documentation:
   Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+  MinDigits: 7
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/SoleNestedConditional:
+  Enabled: false
+
+Style/RescueModifier:
+  Exclude:
+    - spec/**/*
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/StderrPuts:
+  Exclude:
+    - 'lib/capistrano/tasks/*.rake'
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/SymbolProc:
+  Enabled: true
+  IgnoredMethods:
+    # StateMachines
+    - before_transition
+    - after_transition
+    # FactoryBot
+    - after
+    - sequence

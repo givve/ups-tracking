@@ -49,7 +49,7 @@ module UPS
       attr_reader :attributes
 
       def initialize(attributes)
-        raise ArgumentError, 'Attributes must be a Hash' unless attributes.is_a?(Hash)
+        fail ArgumentError, 'Attributes must be a Hash' unless attributes.is_a?(Hash)
 
         @attributes = attributes
       end
