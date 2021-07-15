@@ -5,7 +5,7 @@ module UPS
     class Response
       class Header
         def initialize(header)
-          raise ArgumentError, 'Headers must be a Hash' unless header.is_a?(Hash)
+          fail ArgumentError, 'Headers must be a Hash' unless header.is_a?(Hash)
 
           @header = header.transform_keys { |key| transform_key(key) }
         end
