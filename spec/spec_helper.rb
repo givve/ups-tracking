@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-Bundler.require(:test)
+Bundler.require(:development)
 
 FIXTURES_ROOT = Pathname.new(File.expand_path('fixtures', __dir__)).freeze
 
@@ -33,5 +33,9 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
   end
 end
