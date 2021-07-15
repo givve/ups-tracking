@@ -3,11 +3,8 @@
 require 'bundler/setup'
 Bundler.require(:development)
 
-FIXTURES_ROOT = Pathname.new(File.expand_path('fixtures', __dir__)).freeze
-
-SimpleCov.formatters = [
-  SimpleCov::Formatter::HTMLFormatter
-]
+require 'simplecov'
+require 'simplecov_json_formatter'
 
 SimpleCov.start do
   add_filter '/rakelib/'
@@ -15,6 +12,12 @@ SimpleCov.start do
   add_filter '/vendor/'
   minimum_coverage_by_file 95
 end
+SimpleCov.formatters = SimpleCov::Formatter::MultiFormatter.new(
+  [SimpleCov::Formatter::JSONFormatter,
+   SimpleCov::Formatter::HTMLFormatter]
+)
+
+FIXTURES_ROOT = Pathname.new(File.expand_path('fixtures', __dir__)).freeze
 
 require 'securerandom'
 
