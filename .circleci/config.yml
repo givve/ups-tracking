@@ -6,7 +6,7 @@ orbs:
 jobs:
   checks:
     docker:
-      - image: circleci/ruby:3.0.4
+      - image: cimg/ruby:3.0.4
     steps:
       - checkout
       - ruby/install-deps:
@@ -20,7 +20,7 @@ jobs:
       docker_image:
         type: string
     docker:
-      - image: circleci/<< parameters.docker_image >>
+      - image: cimg/<< parameters.docker_image >>
     steps:
       - checkout
       - ruby/install-deps:
