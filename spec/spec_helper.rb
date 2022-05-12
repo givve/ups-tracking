@@ -23,7 +23,7 @@ require 'securerandom'
 
 require 'ups/tracking'
 
-Dir["#{__dir__}/helpers/*.rb"].sort.each { |file| require file }
+Dir["#{__dir__}/helpers/*.rb"].each { |file| require file }
 
 RSpec.configure do |config|
   config.include(FixtureHelpers)
