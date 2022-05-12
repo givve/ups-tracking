@@ -19,15 +19,5 @@ RSpec.describe UPS::JsonApi do
         end.to change { configuration.access_key }.to(access_key)
       end
     end
-
-    context 'when modifying the environment' do
-      it 'changes the access_key' do
-        expect do
-          described_class.configure do |config|
-            config.environment = :production
-          end
-        end.to change { configuration.environment }.from(:testing).to(:production)
-      end
-    end
   end
 end

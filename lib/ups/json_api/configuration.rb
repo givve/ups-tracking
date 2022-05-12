@@ -5,24 +5,12 @@ module UPS
     class Configuration
       include Singleton
 
-      ENVIRONMENTS = [:production, :testing].freeze
-
       attr_writer :access_key
 
-      [:access_key, :environment].each do |method|
-        define_method(method) do
-          value = instance_variable_get("@#{method}".to_sym)
+      def access_key
+        fail Error, "Please configure 'access_key' first." unless @access_key
 
-          fail Error, "Please configure '#{method}' first." if value.nil?
-
-          value
-        end
-      end
-
-      def environment=(value)
-        fail ArgumentError, "Unknown environment '#{value.inspect}'" unless ENVIRONMENTS.include?(value)
-
-        @environment = value
+        @access_key
       end
     end
   end
